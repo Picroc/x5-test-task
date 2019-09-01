@@ -1,0 +1,41 @@
+.bucket-cell {
+    display: flex;
+    padding: 10px 5px 10px 5px;
+    width: 100%;
+    height: 150px;
+
+    cursor: pointer;
+}
+
+.bucket-cell-content {
+    padding-right: 5%;
+}
+
+.bucket-cell span {
+    color: #E0E0E0;
+    font-size: 0.9em;
+}
+
+.bucket-cell h3 {
+    color: #EEEEEE;
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.bucket-cell p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.bucket-cell-checkbox {
+    display: flex;
+    flex-grow: 2;
+    justify-content: flex-end;
+    align-items: center;
+}

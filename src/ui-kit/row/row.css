@@ -1,0 +1,23 @@
+.row {
+    display: flex;
+}
+
+.row > div:last-child {
+    margin-right: 0px;
+}
+
+.row:nth-child(even) > div {
+    background: #757575;
+}
+
+.row-header > div {
+    border-right: 1px solid gray;
+}
+
+.row-header > div:last-child {
+    border-right: 0;
+}
+
+.row-focused > div {
+    background: #ef5350 !important;
+}

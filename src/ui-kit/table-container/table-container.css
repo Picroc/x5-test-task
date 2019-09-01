@@ -1,0 +1,40 @@
+.table-container {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    height: 80vh;
+    max-height: 1200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+
+    background-color: #9E9E9E;
+    box-shadow: 6px 9px 16px -4px rgba(0,0,0,0.75);
+}
+
+.table-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #9E9E9E;
+    border: 1px gray solid;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #757575;
+}
+
+.table-container:not(.inner) {
+    border-bottom: 1px solid gray;
+    min-height: 300px;
+}
+
+.inner {
+    height: unset;
+    overflow: hidden;
+}
+

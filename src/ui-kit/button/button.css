@@ -1,0 +1,32 @@
+.button {
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 4px;
+
+    background-color: #757575;
+    color: #EEEEEE;
+
+    justify-content: center;
+
+    padding: 5px 0 5px 0;
+    width: 30%;
+
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
+.button:hover {
+    box-shadow: 5px 5px 5px -4px rgba(0,0,0,0.75);
+    transition: all 0.5s;
+}
+
+.disabled {
+    background-color: #9E9E9E;
+    cursor: default;
+
+    transition: all 0.7s;
+}
+
+.disabled:hover {
+    box-shadow: none;
+}
