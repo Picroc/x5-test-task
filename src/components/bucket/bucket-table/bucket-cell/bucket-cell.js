@@ -4,7 +4,6 @@ import './bucket-cell.css';
 import Checkbox from './check-box';
 
 const BucketCell = (data) => {
-    console.log('Checked ', data.checked);
     return (
         <div className='bucket-cell'>
             <div className='bucket-cell-content'>

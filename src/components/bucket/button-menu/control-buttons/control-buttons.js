@@ -6,7 +6,6 @@ import { selectControl, removeFromBucket } from '../../../../model/actions';
 const BucketControlButtons = ({bucket, onSelectAll, onSelectNone, onRemoveSelected}) => {
     const checkedItems = bucket.filter(item => item.checked);
     const noItems = !Boolean(bucket.length);
-    console.log('In bucket: ', bucket, '\nNoItems: ', noItems);
     return (
         <React.Fragment>
             <Button

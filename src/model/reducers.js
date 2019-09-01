@@ -64,7 +64,6 @@ function bucket(state = [], action) {
 }
 
 function products(state = [], action) {
-    console.log('Something is going on');
     switch (action.type) {
         case ADD_TO_BUCKET:
             return state.filter(item => item.id !== action.item.id);
