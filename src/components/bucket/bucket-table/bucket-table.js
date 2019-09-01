@@ -10,7 +10,7 @@ const BucketTable = ({ data = [], onBucketItemClick }) => {
         <React.Fragment>
             <TableContainer variant='inner'>
                 <p style={{ textAlign: 'center' }}>
-                    Bucket
+                    Корзина
                 </p>
             </TableContainer>
             <TableContainer >

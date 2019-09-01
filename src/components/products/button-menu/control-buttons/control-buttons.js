@@ -30,7 +30,7 @@ const ProductControlButtons = ({selected, products, onSelectDown, onSelectUp, on
                     return onAddToBucket(products[selected])}}
                 variant={!products.length ? 'disabled' : ''}
             >
-                <p>Add</p>
+                <p>Добавить</p>
             </Button>
         </React.Fragment>
     );

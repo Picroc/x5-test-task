@@ -8,7 +8,7 @@ const BucketCell = (data) => {
     return (
         <div className='bucket-cell'>
             <div className='bucket-cell-content'>
-                <span>Art.: {data.artNo}</span>
+                <span>Арт.: {data.artNo}</span>
                 <h3>{data.name}</h3>
                 <p>{data.description}</p>
             </div>

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { ArtCell, DescriptionCell } from './product-cells/product-cells';
 import TableContainer from '../../../ui-kit/table-container/table-container';
 import Row from '../../../ui-kit/row/row';
-import { addToBucket, resolveProducts } from '../../../model/actions';
+import { addToBucket, resolveProducts, focusControl } from '../../../model/actions';
 import { DataLoader } from '../../../service/dataLoader';
 
 class ProductTable extends React.Component {
@@ -16,19 +16,20 @@ class ProductTable extends React.Component {
     }
 
     render() {
-        const {data = [], selected, onProductItemClick} = this.props;
+        const {data = [], selected, onProductItemClick, onSelectUp} = this.props;
         return (
             <React.Fragment>
                 <TableContainer variant='inner'>
                     <Row variant='row-header'>
-                        {ArtCell('Art.')}
-                        {DescriptionCell('Name')}
+                        {ArtCell('Арт.')}
+                        {DescriptionCell('Наименование')}
                     </Row>
                 </TableContainer>
                 <TableContainer>
                     {data.map((el, index) => {
                         return (
-                            <Row onClick={() => { console.log('click'); return onProductItemClick(el) }} key={el.id} variant={index === selected ? 'row-focused' : ''}>
+                            <Row onClick={() => { if(data.length - 1 === selected && data.length - 1 !== 0)
+                                    onSelectUp(); return onProductItemClick(el) }} key={el.id} variant={index === selected ? 'row-focused' : ''}>
                                 {ArtCell(el.artNo)}
                                 {DescriptionCell(el.name)}
                             </Row>
@@ -54,6 +55,9 @@ const mapDispatchToProps = dispatch => {
         },
         onResolveProducts: products => {
             dispatch(resolveProducts(products));
+        },
+        onSelectUp: () => {
+            dispatch(focusControl('up'));
         }
     }
 }

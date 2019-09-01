@@ -16,7 +16,7 @@ const BucketControlButtons = ({bucket, onSelectAll, onSelectNone, onRemoveSelect
                 }}
                 variant={noItems || checkedItems.length === bucket.length ? 'disabled' : ''}
             >
-                <p>Select All</p>
+                <p>Выбрать все</p>
             </Button>
             <Button
                 onClick={() => {
@@ -25,7 +25,7 @@ const BucketControlButtons = ({bucket, onSelectAll, onSelectNone, onRemoveSelect
                 }}
                 variant={noItems || checkedItems.length === 0 ? 'disabled' : ''}
             >
-                <p>Select none</p>
+                <p>Снять выбор</p>
             </Button>
             <Button
                 onClick={() => {
@@ -34,7 +34,7 @@ const BucketControlButtons = ({bucket, onSelectAll, onSelectNone, onRemoveSelect
                 }}
                 variant={noItems || !checkedItems.length ? 'disabled' : ''}
             >
-                <p>Remove selected</p>
+                <p>Удалить выбранное</p>
             </Button>
         </React.Fragment>
     );
